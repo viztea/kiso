@@ -30,6 +30,11 @@ Available Conversions:
 ## Usage
 
 ```kotlin
+// common
+implementation("gay.vzt.kiso:kiso-core:{VERSION}")
+```
+
+```kotlin
 import kiso.ext.format
 import kiso.text.format.Format
 import kiso.text.format.Formatter

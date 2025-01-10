@@ -1,5 +1,6 @@
 import com.vanniktech.maven.publish.JavadocJar
 import com.vanniktech.maven.publish.KotlinMultiplatform
+import org.jetbrains.kotlin.util.prefixIfNot
 
 plugins {
     id("com.vanniktech.maven.publish.base")
@@ -33,7 +34,7 @@ publishing {
 }
 
 mavenPublishing {
-    coordinates("gay.vzt.kiso", project.name)
+    coordinates("gay.vzt.kiso", project.name.prefixIfNot("kiso-"))
 
     if (plugins.hasPlugin("org.jetbrains.kotlin.multiplatform")) {
         configure(KotlinMultiplatform(javadocJar = JavadocJar.Dokka("dokkaHtml")))

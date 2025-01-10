@@ -8,6 +8,10 @@
 - kiso/tracing: multiplatform opentelemetry tracing api
 - kiso/ext/koin: [koin](https://insert-koin.io) utilities
 
+## Versions
+
+- `kiso-core` 0.0.1
+
 ## Opinionated
 
 If you've used or browsed this repo at all, you may have noticed the use of snake case instead of the kotlin standard of

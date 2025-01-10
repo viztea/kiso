@@ -12,6 +12,11 @@ a simple logging api based on kotlin-logging
 
 ## Usage
 
+```kotlin
+// common
+implementation("gay.vzt.kiso:kiso-core:{VERSION}")
+```
+
 ```kt
 import kiso.common.logger
 import kiso.log.info
@@ -42,3 +47,8 @@ class MyClass {
     }
 }
 ```
+
+When running on the JVM you will need to implement or use a logging backend like `slf4j` or `log4j2` and implement
+the `kiso.log.LoggingProvider` service to provide the logger implementation.
+
+Artifact for log4j2: `gay.vzt.kiso:kiso-log-impl:log4j2:{VERSION}`
