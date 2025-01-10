@@ -16,7 +16,7 @@ repositories {
 }
 ```
 
-- `kiso-core` 0.0.1 [api reference](https://maven.dimensional.fun/javadoc/releases/gay/vzt/kiso/kiso-core/0.0.1/raw/index.html)
+- `kiso-core` 0.0.2 [api reference](https://maven.dimensional.fun/javadoc/releases/gay/vzt/kiso/kiso-core/0.0.2/raw/index.html)
 
 ## Opinionated
 
