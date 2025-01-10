@@ -10,7 +10,7 @@
 
 ## Versions
 
-- `kiso-core` 0.0.1 [api reference](https://maven.dimensional.fun/javadoc/releases/gay/vzt/kiso/kiso-core/0.0.1)
+- `kiso-core` 0.0.1 [api reference](https://maven.dimensional.fun/javadoc/releases/gay/vzt/kiso/kiso-core/0.0.1/raw/index.html)
 
 ## Opinionated
 
