@@ -1,0 +1,3 @@
+plugins {
+    `kiso-module`
+}

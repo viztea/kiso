@@ -1,0 +1,10 @@
+.idea/
+.fleet/
+
+.gradle/
+.kotlin/
+
+/build
+
+build
+!build/generated/*

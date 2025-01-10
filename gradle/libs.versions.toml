@@ -1,0 +1,140 @@
+[versions]
+#@formatter:off
+# kotlin     - https://github.com/google/ksp
+#ksp          = "2.0.20-1.0.25"
+#ksp          = "2.1.0-Beta1-1.0.25"
+ksp          = "2.0.255-SNAPSHOT"
+
+# kotlin     - https://github.com/InsertKoinIO/koin
+koin         = "4.0.0"
+
+# java       - https://github.com/open-telemetry/opentelemetry-java
+otel         = "1.43.0"
+
+# kotlin/jvm - https://github.com/charleskorn/kaml
+kaml         = "0.60.0"
+
+# kotlin     - https://github.com/him188/yamlkt
+yamlkt       = "0.13.0"
+
+# kotlin     - https://github.com/Peanuuutz/tomlkt
+tomlkt       = "0.4.0"
+
+# kotlin     - https://github.com/pdvrieze/xmlutil
+xmlutil      = "0.90.2"
+
+# kotlin     - https://github.com/ajalt/mordant
+mordant      = "3.0.1"
+
+# java       - https://github.com/ch-qos/logback-classic
+logback      = "1.5.6" # TODO: deprecate
+
+# java       - https://github.com/nomisRev/kotlinx-serialization-jsonpath
+json-path    = "2.0.0-alpha.1" # TODO(deps): check
+
+# java       -
+kotlinpoet   = "1.16.0"
+
+# kotlin     - https://github.com/kordlib/codegen.kt
+kord-codegen = "main-SNAPSHOT"
+
+# kotlin     - https://github.com/touchlab/Stately
+stately-core = "2.1.0"
+
+# definition files for javascript - https://github.com/JetBrains/kotlin-wrappers
+dkt-node = "20.11.30-pre.759"
+dkt      = "1.0.0-pre.759"
+
+# plugins
+maven-publish-plugin = "0.27.0" # https://github.com/vanniktech/gradle-maven-publish-plugin
+
+#
+kotlin-serialization = "1.7.3"  # https://github.com/kotlin/kotlinx.serialization
+kotlin-coroutines    = "1.9.0"  # https://github.com/kotlin/kotlinx.coroutines
+kotlin-datetime      = "0.6.1"  # https://github.com/kotlin/kotlinx-datetime
+kotlin-atomicfu      = "0.26.0" # https://github.com/kotlin/kotlinx-atomicfu
+kotlin-logging       = "7.0.0"  # https://github.com/oshai/kotlin-logging
+kotlin-dokka         = "1.9.20" # https://github.com/kotlin/dokka
+kotlin-html          = "0.11.0" # https://github.com/kotlin/kotlinx.html
+kotlin-rpc           = "0.2.4"  # https://github.com/kotlin/kotlinx-rpc
+kotlin-io            = "0.5.4"  # https://github.com/kotlin/kotlinx-io
+kotlin               = "2.1.20-dev-5984" # https://github.com/jetbrains/kotlin
+
+
+#    kotlin-serialization = "1.8.0-RC"# https://github.com/kotlin/kotlinx.serialization
+#    kotlin-coroutines    = "1.9.0"   # https://github.com/kotlin/kotlinx.coroutines
+#    kotlin-datetime      = "0.6.1"   # https://github.com/kotlin/kotlinx-datetime
+#    kotlin-atomicfu      = "0.26.1"  # https://github.com/kotlin/kotlinx-atomicfu
+#    kotlin-logging       = "7.0.0"   # https://github.com/oshai/kotlin-logging
+#    kotlin-dokka         = "1.9.20"  # https://github.com/kotlin/dokka
+#    kotlin-html          = "0.11.0"  # https://github.com/kotlin/kotlinx.html
+#    kotlin-rpc           = "0.4.0"   # https://github.com/kotlin/kotlinx-rpc
+#    kotlin-io            = "0.6.0"   # https://github.com/kotlin/kotlinx-io
+#    kotlin               = "2.1.20-dev-5984" # https://github.com/jetbrains/kotlin
+
+[libraries]
+
+# gradle plugins
+gradle-serialization-plugin = { module = "org.jetbrains.kotlin:kotlin-serialization",    version.ref = "kotlin" }
+gradle-kotlin-plugin        = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin",    version.ref = "kotlin" }
+gradle-atomicfu-plugin      = { module = "org.jetbrains.kotlinx:atomicfu-gradle-plugin", version.ref = "kotlin-atomicfu" }
+gradle-dokka-plugin         = { module = "org.jetbrains.dokka:dokka-gradle-plugin",      version.ref = "kotlin-dokka" }
+gradle-maven-publish-plugin = { module = "com.vanniktech:gradle-maven-publish-plugin",   version.ref = "maven-publish-plugin" }
+gradle-ksp-plugin           = { module = "com.google.devtools.ksp:symbol-processing-gradle-plugin", version.ref = "ksp" }
+
+#
+kotlin-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlin-coroutines" }
+kotlin-datetime   = { module = "org.jetbrains.kotlinx:kotlinx-datetime",        version.ref = "kotlin-datetime" }
+kotlin-atomicfu   = { module = "org.jetbrains.kotlinx:atomicfu",                version.ref = "kotlin-atomicfu" }
+kotlin-logging    = { module = "io.github.oshai:kotlin-logging",                version.ref = "kotlin-logging" }
+kotlin-reflect    = { module = "org.jetbrains.kotlin:kotlin-reflect",            version.ref = "kotlin" }
+kotlin-stdlib     = { module = "org.jetbrains.kotlin:kotlin-stdlib",            version.ref = "kotlin" }
+kotlin-html       = { module = "org.jetbrains.kotlinx:kotlinx-html",            version.ref = "kotlin-html" }
+
+kotlin-io-core       = { module = "org.jetbrains.kotlinx:kotlinx-io-core",       version.ref = "kotlin-io" }
+kotlin-io-bytestring = { module = "org.jetbrains.kotlinx:kotlinx-io-bytestring", version.ref = "kotlin-io" }
+
+kotlin-ser-xml-core = { module = "io.github.pdvrieze.xmlutil:serialization",             version.ref = "xmlutil" }
+kotlin-ser-xml-util = { module = "io.github.pdvrieze.xmlutil:core",                      version.ref = "xmlutil" }
+kotlin-ser-toml     = { module = "net.peanuuutz.tomlkt:tomlkt",                          version.ref = "tomlkt" }
+kotlin-ser-yaml     = { module = "net.mamoe.yamlkt:yamlkt",                              version.ref = "yamlkt" }
+kotlin-ser-kaml     = { module = "com.charleskorn.kaml:kaml",                            version.ref = "kaml" }
+kotlin-ser-core     = { module = "org.jetbrains.kotlinx:kotlinx-serialization-core",     version.ref = "kotlin-serialization" }
+kotlin-ser-json     = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json",     version.ref = "kotlin-serialization" }
+kotlin-ser-json-io  = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json-io",  version.ref = "kotlin-serialization" }
+kotlin-ser-jsonpath = { module = "io.github.nomisrev:kotlinx-serialization-jsonpath",    version.ref = "json-path" }
+kotlin-ser-protobuf = { module = "org.jetbrains.kotlinx:kotlinx-serialization-protobuf", version.ref = "kotlin-serialization" }
+
+stately-concurrency = { module = "co.touchlab:stately-concurrency",            version.ref = "stately-core" }
+stately-collections = { module = "co.touchlab:stately-concurrent-collections", version.ref = "stately-core" }
+
+#
+dkt-browser = { module = "org.jetbrains.kotlin-wrappers:kotlin-browser", version.ref = "dkt"      }
+dkt-node    = { module = "org.jetbrains.kotlin-wrappers:kotlin-node",    version.ref = "dkt-node" }
+dkt-js      = { module = "org.jetbrains.kotlin-wrappers:kotlin-js",      version.ref = "dkt"      }
+
+#
+ksp-api         = { module = "com.google.devtools.ksp:symbol-processing-api", version.ref = "ksp" }
+kotlin-poet     = { module = "com.squareup:kotlinpoet",                       version.ref = "kotlinpoet" }
+kotlin-poet-ksp = { module = "com.squareup:kotlinpoet-ksp",                   version.ref = "kotlinpoet" }
+
+codegen-ksp         = { module = "dev.kord.codegen:ksp",        version.ref = "kord-codegen" }
+codegen-kotlin-poet = { module = "dev.kord.codegen:kotlinpoet", version.ref = "kord-codegen" }
+
+# otel
+otel-api        = { module = "io.opentelemetry:opentelemetry-api",                      version.ref = "otel" }
+otel-sdk        = { module = "io.opentelemetry:opentelemetry-sdk",                      version.ref = "otel" }
+otel-expo-otlp  = { module = "io.opentelemetry:opentelemetry-exporter-otlp",            version.ref = "otel" }
+otel-ext-kotlin = { module = "io.opentelemetry:opentelemetry-extension-kotlin",         version.ref = "otel" }
+
+# otel instrumentation
+otel-inst-jdbc   = { module = "io.opentelemetry.instrumentation:opentelemetry-jdbc",         version = "2.5.0-alpha" }
+otel-inst-ktor   = { module = "io.opentelemetry.instrumentation:opentelemetry-ktor-2.0",     version = "2.5.0-alpha" }
+otel-inst-hikari = { module = "io.opentelemetry.instrumentation:opentelemetry-hikaricp-3.0", version = "2.5.0-alpha" }
+#
+koin            = { module = "io.insert-koin:koin-core",                      version.ref = "koin" }
+
+#
+logback      = { module = "ch.qos.logback:logback-classic",           version.ref = "logback" }
+mordant-core = { module = "com.github.ajalt.mordant:mordant-core",    version.ref = "mordant" }
+mordant-ffm  = { module = "com.github.ajalt.mordant:mordant-jvm-ffm", version.ref = "mordant" }
