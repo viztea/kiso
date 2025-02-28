@@ -2,7 +2,7 @@ plugins {
     `kiso-module`
 }
 
-version = "0.0.2"
+version = "0.0.3"
 
 kotlin {
     sourceSets.commonMain {

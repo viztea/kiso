@@ -17,31 +17,31 @@ public data object FallbackLoggingProvider : LoggingProvider {
         get() = FallbackLoggers
 }
 
-internal object FallbackLoggers : LoggerFactory {
+public object FallbackLoggers : LoggerFactory {
     private val lock = SynchronizedObject()
     private val level_cache = mutableMapOf<String, LogLevel>()
     private val levels = LevelMap.empty()
 
     @Volatile
-    var appender: LogAppender = DefaultLogAppender(DefaultLogFormatter)
+    public var appender: LogAppender = DefaultLogAppender(DefaultLogFormatter)
 
     override fun get(name: String): Logger =
         FallbackLogger(name)
 
-    fun set_level(name: String, level: LogLevel) {
+    public fun set_level(name: String, level: LogLevel) {
         synchronized(lock) {
             levels[name] = level
             level_cache.remove(name)
         }
     }
 
-    fun get_level(name: String): LogLevel = synchronized(lock) {
+    public fun get_level(name: String): LogLevel = synchronized(lock) {
         level_cache.getOrPut(name) { levels[name] }
     }
 }
 
 @JvmInline
-internal value class FallbackLogger(override val name: String) : Logger {
+public value class FallbackLogger(override val name: String) : Logger {
     override val level: LogLevel
         get() = FallbackLoggers.get_level(name)
 
